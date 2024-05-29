@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "691402880716",
+    "project_id": "digito-graph",
+    "storage_bucket": "digito-graph.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:691402880716:android:d314813ab44add94ebb469",
+        "android_client_info": {
+          "package_name": "com.example.digito_graph"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "691402880716-aqfllq6rbstlfoeoh8ul3417hcubsj7m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.digito_graph",
+            "certificate_hash": "fc19a6dd769a4cd602ffc4a8589888a706a257e8"
+          }
+        },
+        {
+          "client_id": "691402880716-t3nq67fht5f14p33flbccdpdieghtss5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA17eIYaMQHf4gkWkXCRlUmTh71aIphX1Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "691402880716-t3nq67fht5f14p33flbccdpdieghtss5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
