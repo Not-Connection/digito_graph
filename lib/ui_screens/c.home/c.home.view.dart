@@ -10,6 +10,7 @@ class HomeView extends StatelessWidget {
         preferredSize: Size.fromHeight(56),
         child: HomeAppbar(),
       ),
+      endDrawer: HomeDrawerProfile(),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

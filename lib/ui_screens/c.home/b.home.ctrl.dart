@@ -10,4 +10,8 @@ class HomeCtrl {
   Color getThemePrimary(BuildContext context) {
     return Theme.of(context).colorScheme.primary;
   }
+
+  signOut() => Serv.auth.signOut();
+
+  deleteAccount() => Serv.auth.deleteAccount();
 }

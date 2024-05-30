@@ -9,4 +9,5 @@ abstract class Ctrl {
   static VerifyCtrl get verify => VerifyCtrl();
   static LoginCtrl get login => LoginCtrl();
   static RegisterCtrl get register => RegisterCtrl();
+  static ProfileCtrl get profile => ProfileCtrl();
 }

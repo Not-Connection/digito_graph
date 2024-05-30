@@ -21,7 +21,8 @@ class HomeInfo extends StatelessWidget {
         ),
         height: 100,
         width: double.infinity,
-        child: Container(
+        child: OnReactive(
+          () => Container(
             padding: const EdgeInsets.all(10),
             child: Column(
               children: [
@@ -38,7 +39,9 @@ class HomeInfo extends StatelessWidget {
                 const SizedBoxH(10),
                 const Text('Your profile is complete, now you can create a signature or verify your signature'),
               ],
-            )),
+            ),
+          ),
+        ),
       ),
     );
   }

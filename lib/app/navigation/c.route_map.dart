@@ -13,5 +13,6 @@ class RouteMap {
     Routes.verify: (RouteData data) => const VerifyView(),
     Routes.login: (RouteData data) => const LoginView(),
     Routes.register: (RouteData data) => const RegisterView(),
+    Routes.profile: (RouteData data) => const ProfileView(),
   };
 }

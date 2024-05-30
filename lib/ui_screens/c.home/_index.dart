@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:digito_graph/ui_widgets/spaces/_index.dart';
 import 'package:flutter/material.dart';
 import 'package:states_rebuilder/states_rebuilder.dart';
@@ -15,6 +13,7 @@ part 'widgets/b.home.info.dart';
 part 'widgets/c.home.buttons.dart';
 part 'widgets/d.home.feat_button.dart';
 part 'widgets/e.home.recent_activities.dart';
+part 'widgets/f.home.drawer_profile.dart';
 
 HomeData get _dt => Data.home.st;
 HomeCtrl get _ct => Ctrl.home;
