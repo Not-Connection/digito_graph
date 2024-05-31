@@ -26,5 +26,5 @@ class VerifyData {
 
   final rxIsSignatureValid = RM.inject<bool?>(() => null);
 
-  final rxQRCodeBytes = _pv.rxQRCodeBytes;
+  final rxQRCodeBytes = RM.inject<Uint8List?>(() => null, autoDisposeWhenNotUsed: true);
 }

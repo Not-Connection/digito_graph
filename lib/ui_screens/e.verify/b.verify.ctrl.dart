@@ -129,27 +129,16 @@ class VerifyCtrl {
   Future<String> convertPDFtoImage(String pdfPath) async {
     final document = await PdfDocument.openFile(pdfPath);
     final outputDir = await getTemporaryDirectory();
-    // logx.i('hihihihi');
+
     final pdfDir = Directory('${outputDir.path}/pdf_images');
-    // logx.w(pdfDir.toString());
-    // logx.i('wkwkwkwk');
 
     if (await pdfDir.exists()) {
       await pdfDir.delete(recursive: true);
     }
-    // logx.i(pdfPath);
 
     await pdfDir.create();
     String imagePath = '';
     final page = await document.getPage(1);
-    // final height = page.height;
-    // final pageImage = await page.render(
-    //   width: page.width,
-    //   height: page.height,
-    //   format: PdfPageImageFormat.png,
-    //   // quality: 1080,
-    //   cropRect: Rect.fromLTWH(20, height - 70, 60, 60),
-    // );
 
     final ratio = page.width / page.height;
     const pageHeight = 5000.0;
@@ -182,23 +171,14 @@ class VerifyCtrl {
 
   Future<void> imageProcess() async {
     try {
-      // final data = await QrCodeToolsPlugin.decodeFrom(_dt.rxQRCodeImage.st!.path);
-      // logx.e('$data');
-      // final Uint8List data = x.buffer.asUint8List();
-      // debugPrint(data.toString());
-      // logx.e('${_dt.rxQRCodeBytes.st}');
       _dt.rxPDFImagePath.st = await convertPDFtoImage(_dt.rxFilePickedResultPathWatermark.st);
-      // final pdfImageBytes =
+
       final decoder = QRCodeDartScanDecoder(
         formats: [BarcodeFormat.qrCode],
       );
-      // logx.e(_dt.rxQRCodeBytes.st.toString());
-      // final ImagePicker picker = ImagePicker();
-      // final pickedFile = await picker.pickImage(source: ImageSource.gallery);
 
       final xfile = XFile(_dt.rxPDFImagePath.st);
-      // final xfile = XFile.fromData(data);
-      // Result? result = await decoder.decodeFile(pickedFile!);
+
       Result? result = await decoder.decodeFile(xfile);
       logx.e(result.toString());
 

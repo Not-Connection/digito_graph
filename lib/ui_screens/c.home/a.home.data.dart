@@ -8,4 +8,8 @@ class HomeData {
   final rxRandom = Prov.sample.st.rxRandom;
 
   final rxUser = Prov.auth.st.rxUser;
+
+  final rxHistories = Prov.signature.st.rxHistories;
+
+  final rxResultPDFwithQRCodePath = RM.inject<String>(() => '', autoDisposeWhenNotUsed: true);
 }

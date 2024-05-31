@@ -12,4 +12,24 @@ class SignatureServ {
   void onSetState() {
     logzz.i(SignatureServ, 'rxCounter setState success');
   }
+
+  addToHistories(String qrImage, String docImage) {
+    _pv.rxHistories.setState(
+      (s) => Histories(
+        values: [
+          ...s.values,
+        ]..insert(
+            0,
+            History(
+              qrBytes: qrImage,
+              documentPath: docImage,
+            ),
+          ),
+      ),
+    );
+  }
+
+  clearHistories() {
+    _pv.rxHistories.setState((s) => Histories(values: []));
+  }
 }

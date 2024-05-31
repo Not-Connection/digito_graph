@@ -17,7 +17,7 @@ Future<void> inits() async {
   // }
 
   Serv.sample.init();
-  Serv.signature.init();
+  // Serv.signature.init();
   Serv.auth.init();
 
   logx.wtf('inits success');

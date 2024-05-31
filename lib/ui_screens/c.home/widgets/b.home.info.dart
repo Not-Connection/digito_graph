@@ -29,9 +29,11 @@ class HomeInfo extends StatelessWidget {
                 Align(
                   alignment: Alignment.topLeft,
                   child: Text(
-                    _dt.rxUser.st!.displayName != null
-                        ? 'Hi, ${_dt.rxUser.st!.displayName}'
-                        : 'Hi ${_dt.rxUser.st!.email}',
+                    _dt.rxUser.st == null
+                        ? 'Hi, Anonymous'
+                        : _dt.rxUser.st!.displayName != null
+                            ? 'Hi, ${_dt.rxUser.st!.displayName}'
+                            : 'Hi ${_dt.rxUser.st!.email}',
                     textScaler: const TextScaler.linear(1.5),
                     overflow: TextOverflow.ellipsis,
                   ),

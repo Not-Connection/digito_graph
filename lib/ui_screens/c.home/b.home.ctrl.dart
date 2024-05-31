@@ -14,4 +14,8 @@ class HomeCtrl {
   signOut() => Serv.auth.signOut();
 
   deleteAccount() => Serv.auth.deleteAccount();
+
+  final rxHistories = Prov.signature.st.rxHistories;
+
+  clearHistories() => Serv.signature.clearHistories();
 }

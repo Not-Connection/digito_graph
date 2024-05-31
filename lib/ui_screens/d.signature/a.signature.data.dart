@@ -7,12 +7,14 @@ class SignatureData {
 
   final rxRandom = Prov.sample.st.rxRandom;
 
+  final rxPersonalInfo = RM.inject<PersonalInfo>(() => PersonalInfo());
+
   final rxPickedFile = RM.inject<File?>(() => null);
   final rxPickedPdfFileOri = RM.inject<File?>(() => null);
   final rxPickedPdfFileQRCode = RM.inject<File?>(() => null);
 
   final rxResultPDFwithQRCode = RM.inject<File?>(() => null, autoDisposeWhenNotUsed: false);
-  final rxResultPDFwithQRCodePath = RM.inject<String>(() => '');
+  final rxResultPDFwithQRCodePath = RM.inject<String>(() => '', autoDisposeWhenNotUsed: true);
 
   final rxQRCodeFromPDFPath = RM.inject<String?>(() => null);
 
@@ -38,7 +40,7 @@ class SignatureData {
 
   final rxSelectedIndex = RM.inject<int>(() => 0);
 
-  final rxQRCodeBytes = _pv.rxQRCodeBytes;
+  final rxQRCodeBytes = RM.inject<Uint8List?>(() => null, autoDisposeWhenNotUsed: true);
   final rxQRCodeImage = RM.inject<File?>(() => null);
   final rxFileSignatured = RM.inject<File?>(() => null);
 

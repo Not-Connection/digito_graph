@@ -18,15 +18,69 @@ class HomeRecentActivities extends StatelessWidget {
         ),
         color: Colors.grey.withOpacity(0.05),
       ),
-      child: const Column(
+      child: Column(
         children: [
-          Align(
+          const Align(
             alignment: Alignment.topLeft,
             child: Text(
               'Recent Activities',
               textScaler: TextScaler.linear(1.2),
             ),
           ),
+          // const SizedBoxH(10),
+          // Card(
+          //   child: ListTile(
+          //     title: const Text('Tugas1_Jarkom.pdf'),
+          //     leading: SizedBox(
+          //       width: 100,
+          //       height: 100,
+          //       child: Image.asset('assets/images/qrcode.png'),
+          //     ),
+          //   ),
+          // ),
+          // Card(
+          //   child: ListTile(
+          //     title: const Text('Tugas_pemweb.pdf'),
+          //     leading: SizedBox(
+          //       width: 100,
+          //       height: 100,
+          //       child: Image.asset('assets/images/qrcode.png'),
+          //     ),
+          //   ),
+          // ),
+
+          // Container(
+          //   child: _dt.rxHistories.st.values.isNotEmpty
+          //       ? OnBuilder<Histories>.data(
+          //           listenTo: _dt.rxHistories,
+          //           builder: (data) => Container(
+          //             child: data.values.isEmpty
+          //                 ? const Center(
+          //                     child: Text('No Recent Activity'),
+          //                   )
+          //                 : ListView(
+          //                     children: List.generate(
+          //                       2,
+          //                       (index) {
+          //                         // index = index + 1;
+          //                         // final value = data.values[index];
+          //                         return Card(
+          //                           child: ListTile(
+          //                             title: const Text('Tugas1_Jarkom.pdf'),
+          //                             leading: SizedBox(
+          //                               width: 100,
+          //                               height: 100,
+          //                               child: Image.asset('assets/images/qrcode.png'),
+          //                             ),
+          //                           ),
+          //                         );
+          //                       },
+          //                     ),
+          //                   ),
+          //           ),
+          //         )
+          //       : const SizedBox.shrink(),
+          // )
         ],
       ),
     ));

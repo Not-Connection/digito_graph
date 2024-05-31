@@ -10,12 +10,9 @@ class SignatureView extends StatelessWidget {
         preferredSize: Size.fromHeight(56),
         child: SignatureAppbar(),
       ),
-      // bottomNavigationBar: const SignatureBottomNavBar(),
-      // floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      // floatingActionButton: const SignatureFab(),
       body: OnReactive(
-        () => Center(
-          child: _dt.pages.elementAt(_dt.rxSelectedIndex.st),
+        () => const Center(
+          child: SignatureContentSign(),
         ),
       ),
     );

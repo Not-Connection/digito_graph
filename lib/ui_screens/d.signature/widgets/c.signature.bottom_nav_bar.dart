@@ -45,7 +45,7 @@ class SignatureContentSign extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            _dt.rxResultPDFwithQRCode.st != null
+            _dt.rxResultPDFwithQRCodePath.st.isNotEmpty
                 ? Expanded(
                     child: Container(
                       constraints: const BoxConstraints(maxWidth: 500),
